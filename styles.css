@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+}
+
+body{
+    border: 5px solid red;
+    display: flex;
+    flex-direction: column;
+}
+
+.btn{
+    padding: 25px;
+    display: flex;
+    justify-content: center;
+}
+
+button{
+    width: 150px;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.pixel{
+    background-color: yellow;
+}
+
+.pixel:hover{
+    background-color: orange;
+}

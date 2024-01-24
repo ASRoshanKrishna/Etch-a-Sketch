@@ -25,9 +25,15 @@ function draw(MAX_SIZE){
         col.style.display = 'flex';
         for(let i=1;i<=MAX_SIZE;i++){
             const di = document.createElement('div');
-            di.style = "width: 100px; height: 50px; display: flex";
-            di.style.border = "2px solid red";
+            let w = 1400/MAX_SIZE;
+            let h = 700/MAX_SIZE;
+            di.style.width = w + "px";
+            di.style.height = h + "px";
             di.className = "pixel";
+            di.addEventListener("mouseenter", ()=>{
+            di.style.backgroundColor = "#FAF9F6";
+    });
+
             col.appendChild(di);
         }
         contain1.appendChild(col);   
@@ -41,10 +47,8 @@ btn.addEventListener('click', ()=>{
 });
 
 const contain = document.querySelector(".container");
-contain.style.border = "5px solid purple";
 
 const contain1  = document.createElement("div");
-contain1.style.border = "5px solid hotpink";
 contain1.style = "display: flex; flex-direction: column; justify-content: center; align-items: center;";
 
 draw(MAX_SIZE);
